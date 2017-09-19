@@ -19,6 +19,10 @@ app.get("/api/tables", function(req, res){
 	res.json(reservations);
 })
 
+app.get("/home.html", function(req, res){
+	res.sendFile(path.join(__dirname, "dummy.html"));
+})
+
 app.listen(PORT, function(){
 	console.log(`Listening on port ${PORT}`);
 });
